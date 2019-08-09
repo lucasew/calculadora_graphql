@@ -1,0 +1,27 @@
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Mutation {
+    setEstado(key: String, valor: Float): Valor
+}
+
+type Query {
+    getEstado(key: String): Valor
+    getAll(): [Valor]
+}
+
+type Valor {
+    numero: Float
+    chave: String
+    incrementar(): Valor
+    decrementar(): Valor
+    alterar(n: Float): Valor
+    multiplicar(n: Float): Valor
+    dividir(n: Float): Valor
+    somar(n: Float): Valor
+    subtrair(n: Float): Valor
+    raiz(): Valor
+    potencia(n: Float): Valor
+}
